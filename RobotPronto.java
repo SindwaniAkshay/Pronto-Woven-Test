@@ -37,9 +37,6 @@ public class RobotPronto
 				{
 						char alphabet = cmnd.toLowerCase().charAt(0);
 						int numerical = Character.getNumericValue(cmnd.charAt(1));
-						System.out.println(""+cmnd);
-						System.out.println(""+alphabet);
-						System.out.println(""+numerical);
 						
 						switch (direction)
 						{
@@ -49,6 +46,10 @@ public class RobotPronto
 								case 'f' : y += numerical;
 											break;
 								case 'b' : y-= numerical;
+											break;
+								case 'r' : 	direction = setFace (alphabet,numerical,direction);
+											break;
+								case 'l' :  direction = setFace (alphabet,numerical,direction);
 											break;
 							}
 							break;
@@ -60,6 +61,11 @@ public class RobotPronto
 											break;
 								case 'b' : x -= numerical;
 											break;
+											
+								case 'r' : 	direction = setFace (alphabet,numerical,direction);
+											break;
+								case 'l' :  direction = setFace (alphabet,numerical,direction);
+											break;
 							}
 							break;
 							
@@ -70,6 +76,11 @@ public class RobotPronto
 											break;
 								case 'b' : y += numerical;
 											break;
+											
+								case 'r' : 	direction = setFace (alphabet,numerical,direction);
+											break;
+								case 'l' :  direction = setFace (alphabet,numerical,direction);
+											break;
 							}
 							break;
 							case 3:
@@ -78,6 +89,11 @@ public class RobotPronto
 								case 'f' : x -= numerical;
 											break;
 								case 'b' : x+= numerical;
+											break;
+											
+								case 'r' : 	direction = setFace (alphabet,numerical,direction);
+											break;
+								case 'l' :  direction = setFace (alphabet,numerical,direction);
 											break;
 							}
 							break;
@@ -94,7 +110,7 @@ public class RobotPronto
 			}
 					
 					int answer = Math.abs(x) + Math.abs (y);
-					System.out.println("The answer is: " + answer);
+					System.out.println("The minimum distance needed to travel by the robot to reach where it started from is: " + answer);
 					System.out.println("Do you wish to continue? Please press 'Y' to enter another set of commands and 'N' to terminate.");
 					cont = scan.next().charAt(0);
 			
@@ -103,7 +119,7 @@ public class RobotPronto
 		
 	}
 	
-	public static int setFace(String alphabet, int numerical, int currentFacing)
+	public static int setFace(char alphabet, int numerical, int currentFacing)
 	{
 		switch (alphabet)
 		{
