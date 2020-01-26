@@ -2,10 +2,7 @@ import java.io.*;
 import java.util.*;
 import java.lang.*;
 /**
- * Write a description of class RobotPronto here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Akshay Sindwani
  */
 public class RobotPronto
 {
