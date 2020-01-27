@@ -37,3 +37,4 @@ How to run the application?
 8)	Run the command java <filename>. This is used to run the java application.
 
 NOTE: The steps mentioned above are for Windows OS only.
+NOTE: The .java file is the source code. The .class file is made after you compile the code in the same directory as the .java file. 
